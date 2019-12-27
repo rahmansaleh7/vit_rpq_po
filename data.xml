@@ -6,8 +6,9 @@
           <field name="inherit_id" ref="purchase.purchase_order_form"/>
           <field name="priority" eval ="8" />
           <field name="arch" type="xml">
-              <field name="analytic_tag_ids" position="after">
-                   <field name="bisnis" groups="analytic.group_analytic_tags" widget="many2many_tags" options="{'color_field': 'color'}"/>
+              <field name="analytic_tag_ids" position="replace">
+                <field name="lokasi" groups="analytic.group_analytic_tags"  options="{'color_field': 'color'}"/>
+                <field name="bisniss" groups="analytic.group_analytic_tags" options="{'color_field': 'color'}"/>
               </field>
           </field>
       </record>

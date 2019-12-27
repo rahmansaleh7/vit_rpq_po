@@ -8,5 +8,11 @@ class vit_rpqpo(models.Model):
 	_inherit = 'purchase.order.line'
 
 	account_analytic_id = fields.Many2one('account.analytic.account', string='Unit')
-	analytic_tag_ids = fields.Many2many(comodel_name='account.analytic.tag', string='Lokasi', domain=[('analytic_dimension_id.name','=','LOCATION')])
-	bisnis = fields.Many2many(comodel_name='account.analytic.tag', string='Bisnis', domain=[('analytic_dimension_id.name','=','BUSINESS')])
+	lokasi = fields.Many2one(comodel_name='account.analytic.tag',
+										string='Lokasion', 
+										domain=[('analytic_dimension_id.name','=','LOCATION')]
+										)
+	bisniss = fields.Many2one(comodel_name='account.analytic.tag', 
+							string='Bisniss', 
+							domain=[('analytic_dimension_id.name','=','BUSINESS')]
+							)
